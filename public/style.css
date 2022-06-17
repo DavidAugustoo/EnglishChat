@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --background-page: #f8f8f8a9;
+    --background-button: #1991EB;
+    --title-color: #2D2D2D;
+    --subtitle-color: #7B7B7B;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    height: 100vh;
+}
+
+body {
+    background-color: var(--background-page);
+    font-family: 'Poppins', sans-serif;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 3.2rem;
+    color: var(--title-color);
+}
+
+h3 {
+    font-size: 1.2rem;
+    color: var(--subtitle-color);
+    font-weight: 500;
+}
+
+ul {
+    list-style: none;
+}
+
+#login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    display: flex;
+}
+
+/* HEADER */
+
+#login-header {
+    padding: 60px;
+}
+
+/* SECTION LOGIN AREA */
+
+.login-page {
+    height: 100%;
+}
+
+#login-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: -190px;
+}
+
+.login-input {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-input h1,
+.login-input h3 {
+    text-align: center;
+}
+
+.login-input--container {
+    display: flex;
+}
+
+.login-input--container input{
+    flex: 4;
+    padding: 20px 20px;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.login-input--container button{
+    flex: 1;
+    padding: 20px 20px;
+    border: 0px;
+    border-radius: 5px;
+    background-color: var(--background-button);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all ease 0.3s;
+}
+
+.login-input--container button:hover{
+    opacity: .8;
+}
+
+/* FOOTER */
+
+#login-footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+#login-footer p{
+    color: var(--subtitle-color);
+}
+
+#login-footer a{
+    color: var(--subtitle-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+/* CHAT PAGE */
+
+#chat-page {
+    display: none;
+    height: 100vh;
+}
+
+.left-side {
+    display: flex;
+    flex-direction: column;
+    flex: 4;
+    background-color: var(--background-page);
+}
+
+.message-area {
+    flex: 10;
+    padding: 30px;
+}
+
+.message-container {
+    display: inline-flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.message {
+    display: inline;
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.input-area {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 20px 50px;
+}
+
+.input-area input{
+    width: 100%;
+    padding: 20px;
+    border: 0px;
+    border-radius: 5px 0px 0px 5px;
+    outline: 0;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.right-side {
+    flex: 1;
+    background-color: white;
+}
