@@ -18,7 +18,7 @@
                 <h1>Pronto para praticar <br> seu inglês?</h1>
                 <h3>Participe do chat e conecte-se com outras pessoas que <br> estão aprendendo inglês!</h3>
                 <div class="login-input--container">
-                    <input placeholder="Digite seu nome" type="text">
+                    <input id="login-text-input" placeholder="Digite seu nome" type="text">
                     <button>Join</button>
                 </div>
             </div>
@@ -32,26 +32,21 @@
     <section id="chat-page">
         <div class="left-side">
             <div class="message-area">
-                <ul class="message-container">
-                    <li class="message">
-                        <h4>David Augusto</h4>
-                        <p>So, what do you do in your free time?</p>
-                    </li>
-                    <li class="message">
-                        <h4>Lucas Amadeu</h4>
-                        <p>I read a lot, i like suspense and biographies. I also travel a lot on weekends</p>
-                    </li>
-                </ul>
+                <ul class="message-list"></ul>
             </div>
             <div class="input-area">
-                <input placeholder="Type a message" type="text">
+                <input id="chat-text-input" placeholder="Type a message" type="text">
             </div>
         </div>
         <div class="right-side">
-            <h3>Online</h3>
+            <h2>Online</h2>
+            <ul class="user-list">
+                <li><p>David</p></li>
+            </ul>
         </div>
     </section>
 
-    
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 </body>
 </html>
