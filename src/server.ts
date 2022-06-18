@@ -12,14 +12,11 @@ const io = new Server(httpServer);
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended: true}));
 
-// Routes Config
-
 // Starting Server
 var port_number = app.listen(process.env.PORT || 8080);
 httpServer.listen(port_number);
 
 // Socket Config
-
 let connectedUsers: string[] = [];
 
 io.on('connection', (socket: any) => {

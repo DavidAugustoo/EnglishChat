@@ -11,6 +11,7 @@ let chatTextInput = document.querySelector('#chat-text-input');
 loginPage.style.display = 'flex';
 chatpage.style.display = 'none';
 
+
 // Events
 loginNameInput.addEventListener('keyup', (e) => {
     if(e.keyCode === 13) {
@@ -34,6 +35,7 @@ chatTextInput.addEventListener('keyup', (e) => {
         }
     }
 });
+
 
 // Socket
 socket.on('user-ok', (list) => {
@@ -80,9 +82,9 @@ socket.on('reconnect', () => {
     }
 });
 
+
 // Functions
 function renderUserList(userlist) {
-
     let ul = document.querySelector('.user-list');
     ul.innerHTML = '';
 
