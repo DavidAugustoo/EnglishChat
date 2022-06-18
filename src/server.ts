@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.urlencoded({extended: true}));
 
 // Starting Server
-var port_number = app.listen(process.env.PORT || 8080);
+var port_number = app.listen(3000);
 httpServer.listen(port_number);
 
 // Socket Config

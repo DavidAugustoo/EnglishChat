@@ -6,6 +6,7 @@ let loginPage = document.querySelector('#login-page');
 let chatpage = document.querySelector('#chat-page');
 
 let loginNameInput = document.querySelector('#login-text-input');
+let buttonNameInput = document.querySelector('#button-text-input');
 let chatTextInput = document.querySelector('#chat-text-input');
 
 loginPage.style.display = 'flex';
@@ -22,6 +23,16 @@ loginNameInput.addEventListener('keyup', (e) => {
 
             socket.emit('join-request', username);
         }
+    }
+});
+
+buttonNameInput.addEventListener('click', (e) => {
+    let name = loginNameInput.value.trim();
+    if(name != '') {
+        username = name;
+        document.title = `Chat (${username})`;
+
+        socket.emit('join-request', username);
     }
 });
 
