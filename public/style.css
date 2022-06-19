@@ -238,7 +238,6 @@ span {
     flex: 1;
     background-color: white;
     gap: 20px;
-    height: 100%;
 }
 
 .title {
@@ -278,7 +277,7 @@ span {
     }
 
     #chat-page {
-        height: 100vh !important;
+        height: 94vh !important;
         flex-direction: row-reverse;
     }
 
@@ -288,7 +287,6 @@ span {
 
     .right-side.open {
         display: flex;
-        align-items: flex-end;
     }
 
     .menu-icon {
