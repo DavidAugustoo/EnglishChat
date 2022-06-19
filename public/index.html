@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="shortcut icon" href="./img/favicon.svg" type="image/x-icon">
     <title>EnglishChat</title>
 </head>
+
 <body>
     <div id="login-page">
         <header id="login-header">
@@ -20,7 +22,7 @@
                 <h3>Participe do chat e conecte-se com outras pessoas que <br> estão aprendendo inglês!</h3>
                 <div class="login-input--container">
                     <input id="login-text-input" placeholder="Digite seu nome" type="text">
-                    <button id="button-text-input">Join</button>
+                    <button id="button-text-name">Join</button>
                 </div>
             </div>
         </section>
@@ -31,18 +33,24 @@
     </div>
 
     <section id="chat-page">
+        <div class="menu-icon">
+            <img src="./img/menuIcon.svg" alt="">
+        </div>
         <div class="left-side">
             <div class="message-area">
                 <ul class="message-list"></ul>
             </div>
             <div class="input-area">
                 <input id="chat-text-input" placeholder="Type a message" type="text">
+                <button id="button-text-chat">Send</button>
             </div>
         </div>
         <div class="right-side">
-            <h2>Online</h2>
+            <h2 class="title">Online<span></span></h2>
             <ul class="user-list">
-                <li><p>David</p></li>
+                <li>
+                    <p>David</p>
+                </li>
             </ul>
         </div>
     </section>
@@ -50,4 +58,5 @@
     <script src="/socket.io/socket.io.js"></script>
     <script type="text/javascript" src="./script.js"></script>
 </body>
+
 </html>

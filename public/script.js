@@ -6,12 +6,15 @@ let loginPage = document.querySelector('#login-page');
 let chatpage = document.querySelector('#chat-page');
 
 let loginNameInput = document.querySelector('#login-text-input');
-let buttonNameInput = document.querySelector('#button-text-input');
+let buttonNameInput = document.querySelector('#button-text-name');
 let chatTextInput = document.querySelector('#chat-text-input');
+let buttonChatInput = document.querySelector('#button-text-chat');
+let menuIcon = document.querySelector('.menu-icon');
+let userlistArea = document.querySelector('.right-side');
+let body = document.querySelector('body');
 
 loginPage.style.display = 'flex';
 chatpage.style.display = 'none';
-
 
 // Events
 loginNameInput.addEventListener('keyup', (e) => {
@@ -27,6 +30,8 @@ loginNameInput.addEventListener('keyup', (e) => {
 });
 
 buttonNameInput.addEventListener('click', (e) => {
+    console.log('clico');
+
     let name = loginNameInput.value.trim();
     if(name != '') {
         username = name;
@@ -47,12 +52,28 @@ chatTextInput.addEventListener('keyup', (e) => {
     }
 });
 
+buttonChatInput.addEventListener('click', (e) => {
+    let txt = chatTextInput.value;
+    chatTextInput.value = '';
+
+    if(txt != '') {
+        socket.emit('send-msg', txt);
+    }
+});
+
+menuIcon.addEventListener('click', () => {
+    if(userlistArea.classList.contains('open')) {
+        userlistArea.classList.remove('open');
+    } else {
+        userlistArea.classList.add('open');
+    }
+});
+
 
 // Socket
 socket.on('user-ok', (list) => {
     loginPage.style.display = 'none';
     chatpage.style.display = 'flex';
-    chatTextInput.focus();
 
     addMessage('status', null, 'conectado');
 
@@ -97,11 +118,14 @@ socket.on('reconnect', () => {
 // Functions
 function renderUserList(userlist) {
     let ul = document.querySelector('.user-list');
+    let titleSpan = document.querySelector('.title span');
     ul.innerHTML = '';
 
     userlist.map((item) => {
         ul.innerHTML += `<li>${item}<li>`;
     });
+
+    titleSpan.innerHTML = userlist.length;
 }
 
 function addMessage (type, user, msg) {
@@ -122,4 +146,5 @@ function addMessage (type, user, msg) {
     }
 
     ulArea.scrollTop = ulArea.scrollHeight;
+    body.scrollTop = body.scrollHeight;
 }
