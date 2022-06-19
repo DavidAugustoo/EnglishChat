@@ -285,14 +285,8 @@ span {
     }
 
     .right-side.open {
-        position: fixed;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    justify-content: center;
-    align-items: center;
-    transition: all 0.5s;
+        display: flex;
+        align-items: flex-end;
     }
 
     .menu-icon {
