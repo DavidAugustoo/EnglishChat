@@ -233,10 +233,12 @@ span {
 .right-side {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     padding: 40px 30px;
     flex: 1;
     background-color: white;
     gap: 20px;
+    height: 100%;
 }
 
 .title {
