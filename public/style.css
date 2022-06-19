@@ -276,7 +276,7 @@ span {
     }
 
     #chat-page {
-        height: 92vh !important;
+        height: 100vh !important;
         flex-direction: row-reverse;
     }
 
@@ -285,7 +285,14 @@ span {
     }
 
     .right-side.open {
-        display: flex; 
+        position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s;
     }
 
     .menu-icon {
