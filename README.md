@@ -17,6 +17,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - Node.js
 - Sockets.IO
 - Express
+- Typescript
 - HTML
 - CSS
 
